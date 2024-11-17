@@ -20,6 +20,7 @@
     <string name="filtersCleaned">Filtros limpos\n</string>
     <string name="fetch_error">Erro ao buscar questões</string>
     <string name="results_label">Resultados da Pesquisa</string>
+    <string name="link">Link</string>
     <string-array name="array_years">
         <item>Selecione</item>
         <item>2023</item>

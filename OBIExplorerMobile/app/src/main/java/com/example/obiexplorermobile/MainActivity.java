@@ -1,5 +1,8 @@
 package com.example.obiexplorermobile;
 
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -8,7 +11,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -50,7 +55,9 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setNestedScrollingEnabled(true);
 
-        adapter = new QuestionsAdapter(new ArrayList<>());
+        ActionBar actionBar = getSupportActionBar();
+
+        adapter = new QuestionsAdapter(this, new ArrayList<>());
         recyclerView.setAdapter(adapter);
 
         titulo = findViewById(R.id.title);

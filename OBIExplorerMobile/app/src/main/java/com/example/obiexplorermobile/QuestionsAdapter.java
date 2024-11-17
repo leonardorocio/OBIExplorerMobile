@@ -1,5 +1,8 @@
 package com.example.obiexplorermobile;
 
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +19,10 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
     private final List<Questao> questoes;
     private int expandedPosition = -1;
 
-    public QuestionsAdapter(List<Questao> questoes) {
+    private final Context context;
+
+    public QuestionsAdapter(Context context, List<Questao> questoes) {
+        this.context = context;
         this.questoes = questoes;
     }
 
@@ -37,25 +43,27 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
     public void onBindViewHolder(@NonNull QuestaoViewHolder holder, int position) {
         Questao questao = questoes.get(position);
 
-        // Configurar o título
         holder.titulo.setText(
             String.format("%s - %s - %s",
                         questao.getTitulo(), questao.getAno(), questao.getFase())
         );
 
-        // Configurar os detalhes
         holder.enunciado.setText(questao.getEnunciado());
         holder.detalhes.setText(
             String.format("Modalidade: %s, Dificuldade: %s", questao.getModalidade(), questao.getDificuldade())
         );
 
-        // Gerenciar visibilidade da seção expansível
         boolean isExpanded = position == expandedPosition;
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
         holder.itemView.setOnClickListener(v -> {
             expandedPosition = isExpanded ? -1 : position;
             notifyDataSetChanged();
+        });
+
+        holder.link.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(questao.getLink()));
+            context.startActivity(intent);
         });
     }
 
@@ -65,7 +73,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
     }
 
     static class QuestaoViewHolder extends RecyclerView.ViewHolder {
-        TextView titulo, enunciado, detalhes;
+        TextView titulo, enunciado, detalhes, link;
         View expandableLayout;
 
         public QuestaoViewHolder(@NonNull View itemView) {
@@ -73,6 +81,7 @@ public class QuestionsAdapter extends RecyclerView.Adapter<QuestionsAdapter.Ques
             titulo = itemView.findViewById(R.id.titulo);
             enunciado = itemView.findViewById(R.id.enunciado);
             detalhes = itemView.findViewById(R.id.detalhes);
+            link = itemView.findViewById(R.id.link);
             expandableLayout = itemView.findViewById(R.id.expandable_layout);
         }
     }
