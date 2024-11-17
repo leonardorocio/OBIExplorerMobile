@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">OBIExplorerMobile</string>
+    <string name="fetch_questions">Buscar questões</string>
+    <string name="insert_title">Insira o título</string>
+    <string name="insert_description">Insira o enunciado</string>
+    <string name="test_year">Ano da prova</string>
+    <string name="level">Nível</string>
+    <string name="modality">Modalidade</string>
+    <string name="phase">Fase</string>
+    <string name="category">Categoria</string>
+    <string name="subcategory">Subcategoria</string>
+    <string name="topic">Tópico</string>
+    <string name="difficulty">Dificuldade</string>
+    <string name="clear">Limpar Questões</string>
+    <string name="results">Resultados da Pesquisa</string>
+    <string name="no_result_found">Não há retorno para esta pesquisa</string>
+    <string name="select_placeholder">Selecione...</string>
+    <string name="obiexplorer">OBIExplorer</string>
+    <string name="search_questions">Buscando questões...</string>
+    <string name="filtersCleaned">Filtros limpos\n</string>
+    <string name="fetch_error">Erro ao buscar questões</string>
+    <string name="results_label">Resultados da Pesquisa</string>
+    <string-array name="array_years">
+        <item>Selecione</item>
+        <item>2023</item>
+        <item>2022</item>
+        <item>2021</item>
+    </string-array>
+    <string-array name="array_levels">
+        <item>Selecione</item>
+        <item>Fácil</item>
+        <item>Médio</item>
+        <item>Difícil</item>
+    </string-array>
+    <string-array name="array_modalities">
+        <item>Selecione</item>
+        <item>Prova Teórica</item>
+        <item>Prova Prática</item>
+        <item>Prova Mista</item>
+        <item>Simulado</item>
+        <item>Desafio Online</item>
+    </string-array>
+    <string-array name="array_phases">
+        <item>Selecione</item>
+        <item>Fase 1</item>
+        <item>Fase 2</item>
+        <item>Fase 3</item>
+        <item>Semifinal</item>
+        <item>Final</item>
+    </string-array>
+    <string-array name="array_categories">
+        <item>Selecione</item>
+        <item>Biologia</item>
+        <item>Física</item>
+        <item>Matemática</item>
+        <item>Programação</item>
+        <item>Química</item>
+    </string-array>
+    <string-array name="array_subcategories">
+        <item>Selecione</item>
+        <item>Algoritmos</item>
+        <item>Estrutura de Dados</item>
+        <item>Geometria</item>
+        <item>Álgebra</item>
+        <item>Mecânica</item>
+    </string-array>
+    <string-array name="array_topics">
+        <item>Selecione</item>
+        <item>Complexidade de Algoritmos</item>
+        <item>Grafos</item>
+        <item>Cálculo Diferencial e Integral</item>
+        <item>Leis de Newton</item>
+        <item>Teoria dos Números</item>
+    </string-array>
+    <string-array name="array_dificuldades">
+        <item>Selecione</item>
+        <item>Muito fácil</item>
+        <item>Fácil</item>
+        <item>Médio</item>
+        <item>Difícil</item>
+        <item>Muito Difícil</item>
+    </string-array>
+</resources>
