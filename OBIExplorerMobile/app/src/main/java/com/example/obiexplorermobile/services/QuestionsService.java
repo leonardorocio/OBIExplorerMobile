@@ -45,7 +45,7 @@ public class QuestionsService  {
         String placeholderString = "0";
         urlBuilder.addQueryParameter("valorTitulo", titulo);
         urlBuilder.addQueryParameter("valorEnunciado", enunciado);
-        if (!ano.contains(placeholderString)) urlBuilder.addQueryParameter("selectedAnoProva", ano);
+        if (!ano.equals(placeholderString)) urlBuilder.addQueryParameter("selectedAnoProva", ano);
         if (!modalidade.contains(placeholderString)) urlBuilder.addQueryParameter("selectedModalidade", modalidade);
         if (!nivel.contains(placeholderString)) urlBuilder.addQueryParameter("selectedNivel", nivel);
         if (!dificuldade.contains(placeholderString)) urlBuilder.addQueryParameter("selectedDificuldade", dificuldade);
