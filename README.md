@@ -9,3 +9,16 @@ Para o frontend da aplicação, é preciso ter o Android Studio configurado e in
 A pasta do projeto é a <b>OBIExplorerMobile</b>.
 
 Importante! Inicializar primeiro o backend e depois o frontend para que o carregamento dos dados ocorra corretamente.
+
+A aplicação permite que você filtre questões da OBI por diversos aspectos como título, enunciado, ano da prova, fase etc.
+
+Os campos título e enunciado são campos de texto livre, enquanto o restante disponibiliza uma lista de valores para seleção. Apenas um valor pode ser selecionado por campo e o valor "Selecione" atua como um "vazio", ou seja, não é considerado para o filtro. Os filtros podem ser redefinidos por meio do botão vermelho "Limpar Filtros".
+
+Ao clicar no botão verde "Buscar questões" é carregada uma lista com as questões conforme o usuário inseriu as informações nos filtros. Caso não tenha inserido informações, retorna todas as questões. 
+
+Cada questão inicialmente apresenta nome, ano da prova e fase em que foi aplicada, se esta for clicada as informações serão expandidas apresentando modalidade da prova da questão e a dificuldade da questão. Por fim é apresentado um "Link" que redireciona para a questão completa, isto é, abre o navegador padrão com a URL já definida. 
+
+Se a quantidade de questões for suficiente para ocupar mais espaço do que o disponível em tela, a aplicação habilita uma barra de rolagem para visualização completa do conteúdo.
+Apenas uma questão pode ser expandida por vez.
+
+Importante! É necessário que o dispositivo permita que a aplicação conceda o acesso à internet para o carregamento correto das informações.
