@@ -22,3 +22,5 @@ Se a quantidade de questões for suficiente para ocupar mais espaço do que o di
 Apenas uma questão pode ser expandida por vez.
 
 Importante! É necessário que o dispositivo permita que a aplicação conceda o acesso à internet para o carregamento correto das informações.
+
+Desenvolvido por Leonardo Rócio, Lucas Augusto de Oliveira e Vitor Valentin de Oliveira.
